@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "lint:script": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:type": "tsc --noEmit --pretty",
+    "lint-styles": "stylelint src/**/*.css --fix"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -36,6 +39,13 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "postcss": "^8",
+    "stylelint": "^16.2.1",
+    "stylelint-config-recommended": "^14.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "stylelint-no-unsupported-browser-features": "^8.0.1",
+    "stylelint-order": "^6.0.4",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
