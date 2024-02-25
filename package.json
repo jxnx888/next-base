@@ -13,6 +13,16 @@
     "lint:type": "tsc --noEmit --pretty",
     "lint-styles": "stylelint src/**/*.css --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "npm run lint:script",
+    "*.css": "npm run lint-styles",
+    "*.{ts,tsx}": "npm run lint:type"
+  },
   "dependencies": {
     "next": "14.1.0",
     "react": "^18",
