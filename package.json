@@ -13,16 +13,6 @@
     "lint:type": "tsc --noEmit --pretty",
     "lint-styles": "stylelint src/**/*.css --fix"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "npm run lint:script",
-    "*.css": "npm run lint-styles",
-    "*.{ts,tsx}": "npm run lint:type"
-  },
   "dependencies": {
     "next": "14.1.0",
     "react": "^18",
@@ -47,8 +37,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
     "postcss": "^8",
+    "prettier": "^3.2.5",
     "stylelint": "^16.2.1",
     "stylelint-config-recommended": "^14.0.0",
     "stylelint-config-standard": "^36.0.0",
